@@ -85,3 +85,13 @@
 .-rotate-360 {
   @apply rotate-[-360deg]
 }
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: #4b2e89;
+}
+::-webkit-scrollbar-thumb{
+  width: 5px;
+  height: 2px;
+  background-color: #7556b8;
+  border-radius: 5px;
+}
