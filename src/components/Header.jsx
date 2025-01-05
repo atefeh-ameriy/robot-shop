@@ -13,6 +13,19 @@ const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
   const [navLink,setNavLink] = useState( navigation[0])
 
+
+  useEffect(()=>{
+    const handleResize = ()=>{
+      if (window.innerWidth < 768){
+        setOpenNavigation(false)
+              }
+    }
+    window.addEventListener('resize',handleResize)
+
+    return()=>{
+      window.removeEventListener('resize',handleResize)
+    }
+   },[])
   const onScroll = () => {
       // بررسی موقعیت اسکرول برای فعال کردن لینک مناسب
       navigation.forEach((item) => {
