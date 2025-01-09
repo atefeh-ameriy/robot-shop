@@ -16,7 +16,7 @@ const Header = () => {
 
   useEffect(()=>{
     const handleResize = ()=>{
-      if (window.innerWidth < 768){
+      if (window.innerWidth < 768  || window.innerWidth > 768  ){
         setOpenNavigation(false)
               }
     }
